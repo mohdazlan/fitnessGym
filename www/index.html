@@ -18,9 +18,9 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!--
+  <head>
+    <meta charset="utf-8" />
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
             https://cordova.apache.org/docs/en/latest/
         Some notes:
@@ -28,26 +28,139 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <div data-role="page" id="home">
+      <div data-role="header"></div>
+      <div data-role="content">
+        <div id="branding">
+          <h2>Gymnasium Picker</h2>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+        <div id="choice_list">
+          <h1>What type of activity you want to do?</h1>
+          <ul data-role="listview" data-inset="true">
+            <li>
+              <a href="#location" data-transition="slidedown"
+                ><img src="img/weight-lift.png" />
+                <h3>Weight lifting</h3></a
+              >
+            </li>
+            <li>
+              <a href="#location" data-transition="slide"
+                ><img src="img/treadmill.png" />
+                <h3>Treadmill Running</h3></a
+              >
+            </li>
+            <li>
+              <a href="#location" data-transition="flow"
+                ><img src="img/boxing.png" />
+                <h3>Boxing</h3></a
+              >
+            </li>
+            <li>
+              <a href="#location" data-transition="turn"
+                ><img src="img/pull-up.png" />
+                <h3>Pull-ups</h3></a
+              >
+            </li>
+            <li>
+              <a href="#location" data-transition="flip"
+                ><img src="img/push-up.png" />
+                <h3>Push-ups</h3></a
+              >
+            </li>
+            <li>
+              <a href="#location" data-transition="pop"
+                ><img src="img/lunges.png" />
+                <h3>Lunges</h3></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="footer"></div>
+    </div>
+    <div data-role="page" id="location" data-add-back-btn="true">
+      <div data-role="header">
+        <h1>Please choose a gymnasium</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+          <li>
+            <a href="#gymnasium" data-transition="slidedown"
+              ><img src="img/gymBox.png" />
+              <h3>The Gym Box</h3>
+              <p>4 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium" data-transition="slide"
+              ><img src="img/iFitness gym.png" />
+              <h3>iFitness & Gym</h3>
+              <p>3 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium" data-transition="flow"
+              ><img src="img/level-up gym.png" />
+              <h3>Level Up Fitness AEON Kuching Central</h3>
+              <p>2 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium" data-transition="turn"
+              ><img src="img/92 gym.png" />
+              <h3>92 Gyms & Fitness Center</h3>
+              <p>3 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium" data-transition="flip"
+              ><img src="img/j7.png" />
+              <h3>J7 Fitness & Muscle Centre</h3>
+              <p>4 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium" data-transition="pop"
+              ><img src="img/jack.png" />
+              <h3>Jack Fitness Gym</h3>
+              <p>2 stars</p></a
+            >
+          </li>
+          <li>
+            <a href="#gymnasium"
+              ><img src="img/kenyalanggym.png" />
+              <h3>Kenyalang Gym</h3>
+              <p>3 stars</p></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div data-role="footer"></div>
+    </div>
+    <div data-role="page" id="gymnasium" data-add-back-btn="true">
+      <div data-role="header"></div>
+      <div data-role="content"></div>
+      <div data-role="footer"></div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
